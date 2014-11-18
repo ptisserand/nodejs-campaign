@@ -1,9 +1,8 @@
-This is my first nodejs application.
-
-This application will publish on facebook, twitter and send email for all registered user.
+This nodejs application will publish on facebook, twitter and send email for all registered user.
 Registered list is kept in a mongodb database running on the same host.
 
 In order to use this application, you need to create a file named config.js with the following contents:
+```
 module.exports = {
     facebook: {
 	token:'FILL_ME' // application token see https://developers.facebook.com/docs/facebook-login/access-tokens
@@ -33,3 +32,6 @@ module.exports = {
 	access_token_secret: 'FILL_ME'
     }
 };
+```
+
+A Dockerfile is provided to easily generate container providing this application dependencies
