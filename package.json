@@ -1,0 +1,19 @@
+{
+    "name": "codestarter-campaign",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+	"start": "node app.js"
+    },
+    "dependencies": {
+	"express": "*",
+	"nodemailer": "*",
+	"nodemailer-smtp-transport": "*",
+	"monk": "*",
+	"serve-favicon": "*",
+	"morgan": "*",
+	"cookie-parser": "*",
+	"body-parser": "*",
+	"twit": "*"
+    }
+}
