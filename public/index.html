@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Code start campaign</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+   var $form = $('#pledgeID');
+   $form.submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), function(response){
+            // do something here on success
+      $('#waitPledge').text("Thanks for your pledge")
+      $('#pledgeSubmit').prop('disabled', true)
+      },'json');
+      return false;
+   });
+});
+    </script>
+
+  </head>
+  <body>
+    <section>
+      <h1>PLEDGE</h1>
+      <p>
+      </p>
+      <form action="/pledge" method="POST" id="pledgeID">
+	Company:<br/>
+	<input type="text" name="company" value="Company" id="company"/>
+	<br/>
+	Email:<br/>
+	<input type="text" name="email" value="Email" id="email"/>
+	<br/><br/>
+	<input type="submit" value="Pledge!" id="pledgeSubmit"/>
+      </form>
+    </section>
+    <p>
+      <div id="waitPledge">Wait for pledge</div>
+    </p>
+    <p>
+      <div></div>
+    </p>
+  </body>
+</html>
